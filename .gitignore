@@ -1,0 +1,10 @@
+# Bahan referensi dari klien (screenshot Instagram), bukan bagian website
+reference/
+
+# Foto asli resolusi besar; website memakai versi WebP di assets/img/
+assets/*.png
+
+# Sistem
+.DS_Store
+Thumbs.db
+desktop.ini
