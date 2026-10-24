@@ -223,8 +223,40 @@ section {
   padding-top: 1.2rem;
   margin-bottom: clamp(2.5rem, 5vw, 4rem);
 }
-.section-head .section-index {
-  padding-top: 0.4rem;
+/* Section number: big poster numeral with an italic label underneath */
+.section-number {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+.section-head .section-number {
+  padding-top: 0.3rem;
+}
+.section-number-no {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(3.4rem, 6.5vw, 6rem);
+  line-height: 0.78;
+  letter-spacing: -0.06em;
+}
+.section-number-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 1;
+}
+.section-number-label::before {
+  content: '';
+  width: 28px;
+  height: 2px;
+  background-color: currentColor;
+}
+.booking-section .section-number-no {
+  color: var(--yellow);
 }
 /* Two white sections in a row: the top rule already separates them */
 .menu-section + .space-section,
@@ -444,10 +476,12 @@ section {
   border-bottom: 2px solid var(--ink);
 }
 .promo-no {
+  align-self: start;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.12em;
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  line-height: 0.8;
+  letter-spacing: -0.05em;
 }
 .promo-kicker {
   font-style: italic;
@@ -1435,6 +1469,17 @@ input:focus-visible {
 
   .section-head {
     grid-template-columns: 1fr;
+  }
+  .section-number {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+  .section-number-no {
+    font-size: 3.2rem;
+  }
+  .section-number-label {
+    padding-bottom: 0.25rem;
   }
   .menu-board,
   .space-grid,
