@@ -6,7 +6,7 @@ Landing page Bitts Coffee (Ciwasiat dan Cigadung, Pandeglang). Website statis: H
 
 | File / folder | Isi |
 | --- | --- |
-| `index.html` | Halaman utama: promo, menu, suasana, testimoni, reservasi, biji kopi, lokasi, Bitts Club |
+| `index.html` | Halaman utama: promo, menu, suasana, reservasi, ulasan, lokasi, Bitts Club |
 | `syarat-ketentuan.html` | S&K promo Bitts Bike, Bitts Tumbler, dan Bitts Club |
 | `kebijakan-privasi.html` | Kebijakan privasi (UU No. 27 Tahun 2022 tentang PDP) |
 | `style.css`, `script.js` | Tampilan dan interaksi untuk semua halaman |

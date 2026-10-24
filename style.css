@@ -228,8 +228,7 @@ section {
 }
 /* Two white sections in a row: the top rule already separates them */
 .menu-section + .space-section,
-.testimonials-section + .beans-section,
-.beans-section + .location-section {
+.testimonials-section + .location-section {
   padding-top: 0;
 }
 
@@ -861,66 +860,7 @@ section {
   margin-top: 3rem;
 }
 
-/* --- 06 Biji Kopi: spec sheet --- */
-.beans-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border-top: 2px solid var(--ink);
-}
-.bean-card {
-  padding: 1.8rem 2rem 0.5rem 0;
-}
-.bean-card + .bean-card {
-  padding-left: 2rem;
-  border-left: 1px solid var(--hair);
-}
-.bean-origin {
-  font-style: italic;
-  font-weight: 800;
-  font-size: 0.95rem;
-}
-.bean-name {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: clamp(1.7rem, 2.8vw, 2.4rem);
-  line-height: 0.95;
-  letter-spacing: -0.03em;
-  text-transform: uppercase;
-  margin: 0.3rem 0 1.4rem 0;
-}
-.detail-row {
-  display: grid;
-  grid-template-columns: 80px 1fr;
-  gap: 0.8rem;
-  padding: 0.65rem 0;
-  border-top: 1px solid var(--hair);
-  font-size: 0.93rem;
-}
-.detail-row span {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 0.68rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-  padding-top: 0.2rem;
-}
-.detail-row strong {
-  font-weight: 600;
-}
-.bean-tag {
-  display: inline-block;
-  margin-top: 1.2rem;
-  padding: 0.3rem 0.55rem;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 0.68rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  background-color: var(--yellow);
-}
-
-/* --- 07 Lokasi --- */
+/* --- 06 Lokasi --- */
 .open-hours {
   font-family: var(--font-display);
   font-weight: 700;
@@ -1510,15 +1450,6 @@ input:focus-visible {
   }
   .testimonials-grid {
     grid-template-columns: 1fr;
-  }
-  .beans-grid {
-    grid-template-columns: 1fr;
-  }
-  .bean-card,
-  .bean-card + .bean-card {
-    padding: 1.6rem 0 1.4rem 0;
-    border-left: none;
-    border-bottom: 1px solid var(--hair);
   }
   .footer-container {
     grid-template-columns: 1fr 1fr;

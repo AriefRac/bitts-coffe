@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // --- Add subtle entrance effects on scroll ---
-  const revealElements = document.querySelectorAll('.promo-row, .menu-card, .space-photo, .booking-card, .testimonial-card, .bean-card');
+  const revealElements = document.querySelectorAll('.promo-row, .menu-card, .space-photo, .booking-card, .testimonial-card');
   
   const revealOnScroll = () => {
     const windowHeight = window.innerHeight;
