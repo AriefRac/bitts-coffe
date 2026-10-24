@@ -8,7 +8,7 @@
   <meta name="description" content="Coffee shop di Pandeglang, cabang Ciwasiat dan Cigadung. Buka setiap hari 08.00-22.00. Diskon 10% kalau datang naik sepeda atau bawa tumbler.">
   <meta name="keywords" content="bitts coffee, coffee shop pandeglang, kopi pandeglang, cafe ciwasiat, cafe cigadung, tempat bukber pandeglang">
   <meta name="author" content="Bitts Coffee">
-  <meta name="theme-color" content="#1c1c1c">
+  <meta name="theme-color" content="#141414">
   <link rel="canonical" href="https://bittscoffee.example/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -110,53 +110,68 @@
     })(window, document, "clarity", "script", "CLARITY_ID");
   </script>
 
-  <!-- Google Fonts -->
+  <!-- Fonts dari desain Instagram Bitts: tulisan tangan (judul), Arimo (label poster), Open Sans (teks) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  
-  <!-- CSS Link -->
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,700&family=Delicious+Handrawn&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,700;1,800&display=swap" rel="stylesheet">
+  <!-- Angka diskon 3D: hanya memuat karakter 0-9 dan % -->
+  <link href="https://fonts.googleapis.com/css2?family=Titan+One&text=0123456789%25&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Logo Bitts (dua batu), dipakai ulang lewat <use href="#bitts-mark"> -->
+  <svg width="0" height="0" class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="bitts-mark" viewBox="-1 0 64 100">
+      <path fill="currentColor" d="M37.5 1C41.6 1 45.6 2.5 48.5 4C51.4 5.5 53.1 7.5 55 10C56.9 12.5 58.8 16 60 19C61.2 22 62.2 25 62 28C61.8 31 60.6 34.5 59 37C57.4 39.5 54.7 41.5 52.5 43C50.3 44.5 49.2 45.2 46 46C42.8 46.8 37.7 48 33.5 48C29.3 48 24.1 46.8 21 46C17.9 45.2 16.9 44.5 15 43C13.1 41.5 11.1 39 9.5 37C7.9 35 6.7 33.2 5.5 31C4.3 28.8 2.5 26 2.5 23.5C2.5 21 3.8 18.2 5.5 16C7.2 13.8 9.4 12 12.5 10C15.6 8 19.8 5.5 24 4C28.2 2.5 33.4 1 37.5 1Z"/>
+      <path fill="currentColor" d="M33.5 51.5C37.9 51.5 42.5 53.4 45.5 55C48.5 56.6 49.9 59 51.5 61C53.1 63 54 65 55 67C56 69 56.9 71 57.5 73C58.1 75 58.5 77 58.5 79C58.5 81 58.3 83 57.5 85C56.7 87 55.9 89 53.5 91C51.1 93 46.6 95.7 43 97C39.4 98.3 35.7 99 32 99C28.3 99 24.8 98.3 21 97C17.2 95.7 12.2 93 9.5 91C6.8 89 6.2 87 5 85C3.8 83 2.8 81 2 79C1.2 77 0.6 75 0.3 73C0 71 -0.5 69 0.5 67C1.5 65 2.9 63 6 61C9.1 59 14.4 56.6 19 55C23.6 53.4 29.1 51.5 33.5 51.5Z"/>
+    </symbol>
+    <symbol id="bike-badge" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="50" fill="#F2D106"/>
+      <text x="44" y="31" font-family="Delicious Handrawn, cursive" font-size="22" fill="#fff" text-anchor="middle" transform="rotate(-6 44 31)">Bitts</text>
+      <text x="58" y="49" font-family="Delicious Handrawn, cursive" font-size="22" fill="#fff" text-anchor="middle" transform="rotate(-6 58 49)">Bike</text>
+      <g fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="32" cy="74" r="11"/>
+        <circle cx="69" cy="74" r="11"/>
+        <path d="M32 74 L48 74 L42 58 Z M42 58 L62 57 L48 74 M62 57 L69 74 M62 57 L60 51 L67 50 M38 56 L46 56"/>
+      </g>
+    </symbol>
+  </svg>
+
   <!-- Announcement Bar / Marquee -->
-  <div class="marquee-bar">
+  <div class="marquee-bar" aria-hidden="true">
     <div class="marquee-content">
-      <span>WE SERVE BITTER AND SWEETS • WE SERVE BITTER AND SWEETS • WE SERVE BITTER AND SWEETS • WE SERVE BITTER AND SWEETS • </span>
-      <span>WE SERVE BITTER AND SWEETS • WE SERVE BITTER AND SWEETS • WE SERVE BITTER AND SWEETS • WE SERVE BITTER AND SWEETS • </span>
+      <span>we serve bitter and sweets • naik sepeda, dapat diskon • bawa tumbler, lebih hemat • we serve bitter and sweets • naik sepeda, dapat diskon • bawa tumbler, lebih hemat •</span>
+      <span>we serve bitter and sweets • naik sepeda, dapat diskon • bawa tumbler, lebih hemat • we serve bitter and sweets • naik sepeda, dapat diskon • bawa tumbler, lebih hemat •</span>
     </div>
   </div>
 
-  <!-- Header Navigation -->
+  <!-- Header Navigation: logo di tengah seperti di story Instagram Bitts -->
   <header class="main-header">
     <div class="header-container">
-      <a href="#" class="logo-group">
-        <!-- Double Bean SVG Logo (Soft Charcoal version) -->
-        <svg viewBox="0 0 100 100" class="bitts-logo-svg" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="50" cy="50" r="46" fill="#fff" stroke="#1c1c1c" stroke-width="5"/>
-          <!-- Top bean -->
-          <path d="M 36,38 C 38,28 58,26 62,38 C 64,44 54,50 44,48 C 36,46 36,40 36,38 Z" fill="#1c1c1c"/>
-          <!-- Bottom bean -->
-          <path d="M 37,58 C 42,52 60,54 60,64 C 60,72 48,74 41,70 C 35,66 34,62 37,58 Z" fill="#1c1c1c"/>
-        </svg>
+      <nav class="nav-menu nav-left" aria-label="Navigasi utama">
+        <a href="#promo" class="nav-link">Promo</a>
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="#suasana" class="nav-link">Vibes</a>
+        <a href="#booking" class="nav-link">Booking</a>
+      </nav>
+
+      <a href="#" class="logo-group" aria-label="Bitts Coffee, kembali ke atas">
+        <svg class="bitts-mark" aria-hidden="true"><use href="#bitts-mark"/></svg>
         <span class="logo-text">bitts coffee</span>
       </a>
 
-      <nav class="nav-menu">
-        <a href="#promo" class="nav-link">Promo</a>
-        <a href="#menu" class="nav-link">Menu Terbaru</a>
-        <a href="#suasana" class="nav-link">Vibes</a>
-        <a href="#testimoni" class="nav-link">Testimoni</a>
-        <a href="#booking" class="nav-link">Booking</a>
-        <a href="#beans" class="nav-link">Biji Kopi</a>
-        <a href="#lokasi" class="nav-link">Lokasi</a>
-      </nav>
-
-      <div class="header-cta">
-        <a href="https://wa.me/6281234567890?text=Halo%20Bitts%20Coffee,%20saya%20tertarik%20tanya%20tanya%20tentang%20Bitts...%20(via%20website)" target="_blank" class="btn btn-black cta-nav" data-track="click_whatsapp" data-track-label="header">WhatsApp Us</a>
+      <div class="nav-right">
+        <nav class="nav-menu" aria-label="Navigasi lainnya">
+          <a href="#beans" class="nav-link">Biji Kopi</a>
+          <a href="#lokasi" class="nav-link">Lokasi</a>
+        </nav>
+        <div class="header-cta">
+          <a href="https://wa.me/6281234567890?text=Halo%20Bitts%20Coffee,%20saya%20tertarik%20tanya%20tanya%20tentang%20Bitts...%20(via%20website)" target="_blank" class="btn btn-black cta-nav" data-track="click_whatsapp" data-track-label="header">WhatsApp</a>
+        </div>
       </div>
-      
+
       <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Buka menu" aria-expanded="false" aria-controls="mobile-nav">
         <span></span>
         <span></span>
@@ -179,78 +194,89 @@
 
   <main>
     <!-- HERO SECTION -->
-    <section class="hero-section">
+    <section class="hero-section story-bg">
       <div class="hero-container">
         <div class="hero-content">
-          <div class="hero-slogan">we serve bitter and sweets</div>
-          <h1 class="hero-title">bitts<br>coffee.</h1>
+          <p class="tag-line">we serve bitter and sweets</p>
+          <h1 class="hero-title hand">Bitts<br>Coffee</h1>
+          <p class="hero-sub poster">Coffee shop di Pandeglang</p>
           <p class="hero-desc">Bukan sekadar tempat minum kopi biasa. Kami adalah titik temu untuk segala rasa, mulai dari pahitnya realita hingga manisnya momen kebersamaan. Dibuat khusus untuk kamu yang menghargai estetika dan cita rasa asli.</p>
           <div class="hero-buttons">
-            <a href="#menu" class="btn btn-black">Explore Menu</a>
-            <a href="#booking" class="btn btn-white">Reservasi Ruangan</a>
+            <a href="#menu" class="btn btn-black">Lihat Menu</a>
+            <a href="#booking" class="btn btn-white">Reservasi Tempat</a>
           </div>
+          <p class="addr-line"><span><em>Jl. Ciwasiat</em> &amp; <em>Cigadung</em> - Pandeglang</span></p>
         </div>
 
         <div class="hero-graphics">
-          <div class="hero-card polaroid-hero">
-            <img src="assets/img/atmosphere.webp" alt="Suasana bar Bitts Coffee" width="1024" height="1024" fetchpriority="high">
-            <div class="polaroid-caption font-marker">we are open daily!</div>
-          </div>
-          <!-- Sticker Badge 1 -->
-          <div class="sticker-badge sticker-rotate-cw sticker-top">
-            <span>EST. 2026</span>
-          </div>
-          <!-- Sticker Badge 2 -->
-          <div class="sticker-badge sticker-rotate-ccw bg-yellow sticker-bottom">
-            <span>100% ARABICA</span>
-          </div>
+          <figure class="hero-photo">
+            <img src="assets/img/bitts-bar.webp" alt="Bar Bitts Coffee Ciwasiat dengan kemasan biji kopi Gunung Halu, Papua Wamena, dan Jawa" width="503" height="895" fetchpriority="high">
+          </figure>
+          <a href="#promo" class="bike-badge" aria-label="Promo Bitts Bike: diskon 10% untuk pesepeda">
+            <svg aria-hidden="true"><use href="#bike-badge"/></svg>
+          </a>
+          <p class="hero-note hand">open daily<br>08.00-22.00</p>
         </div>
       </div>
+      <div class="village" aria-hidden="true"></div>
     </section>
 
-    <!-- PROMO SECTION -->
+    <!-- PROMO SECTION: dua kartu dengan format story Instagram Bitts -->
     <section class="promo-section" id="promo">
       <div class="section-container">
-        <div class="section-header text-center">
-          <span class="section-tag font-marker">special offers</span>
-          <h2 class="section-title">campaign & promo hemat</h2>
+        <div class="section-header">
+          <p class="tag-line">special offers</p>
+          <h2 class="section-title hand">Promo hemat<br>langsung di kasir</h2>
           <p class="section-subtitle">Bawa kebiasaan baikmu ke Bitts Coffee dan dapatkan potongan harga langsung di kasir!</p>
         </div>
 
         <div class="promo-grid">
           <!-- Promo Card 1: Bitts Bike -->
-          <div class="promo-card card-neo">
-            <div>
-              <div class="promo-badge-yellow">Bitts Bike</div>
-              <h3 class="promo-card-title">Yuk ke Bitts Coffee Naik Sepeda!</h3>
-              <div class="promo-discount-wrapper">
-                <span class="promo-discount-num">10%</span>
-                <span class="promo-discount-label">DISKON</span>
-              </div>
-              <p class="promo-card-desc">Bagi kamu yang datang mengendarai sepeda (jenis apapun!), kamu berhak mendapatkan potongan 10% untuk semua menu minuman.</p>
+          <article class="promo-card story-card">
+            <svg class="story-mark" aria-hidden="true"><use href="#bitts-mark"/></svg>
+            <svg class="story-badge" aria-hidden="true"><use href="#bike-badge"/></svg>
+            <h3 class="promo-card-title hand">Yuk ke Bitts<br>Coffee</h3>
+            <div class="promo-discount">
+              <span class="promo-discount-label">Diskon</span>
+              <span class="promo-discount-num">10<span class="pct">%</span></span>
             </div>
+            <p class="promo-card-sub hand">Untuk pengguna<br>sepeda</p>
+            <p class="promo-card-desc">Datang naik sepeda jenis apa pun dan dapatkan potongan 10% untuk semua menu minuman.</p>
             <div class="promo-footer">
-              <a href="syarat-ketentuan.html#bitts-bike" class="promo-terms">*s&k berlaku</a>
+              <a href="syarat-ketentuan.html#bitts-bike" class="promo-terms">*s&amp;k berlaku</a>
               <button type="button" class="promo-cta-btn open-voucher-modal" data-promo="bike" data-track="claim_voucher" data-track-label="bike">Klaim Voucher</button>
             </div>
-          </div>
+            <div class="village" aria-hidden="true"></div>
+          </article>
 
           <!-- Promo Card 2: Bitts Tumbler -->
-          <div class="promo-card card-neo bg-black text-white">
-            <div>
-              <div class="promo-badge-white">Eco Campaign</div>
-              <h3 class="promo-card-title text-white">Bawa Tumbler Sendiri</h3>
-              <div class="promo-discount-wrapper text-white">
-                <span class="promo-discount-num strike-outline">10%</span>
-                <span class="promo-discount-label">POTONGAN</span>
-              </div>
-              <p class="promo-card-desc text-light">Sayangi bumi, kurangi sampah plastik. Bawa botol atau tumbler-mu dari rumah dan nikmati potongan harga langsung 10% untuk kopi favoritmu.</p>
-            </div>
-            <div class="promo-footer text-light">
-              <a href="syarat-ketentuan.html#bitts-tumbler" class="promo-terms text-light">*s&k berlaku</a>
+          <article class="promo-card story-card">
+            <svg class="story-mark" aria-hidden="true"><use href="#bitts-mark"/></svg>
+            <h3 class="promo-card-title hand">Beli kopi<br>pake tumbler</h3>
+            <p class="promo-card-poster poster">Dapat potongan 10%</p>
+            <svg class="tumbler-art" viewBox="0 0 120 200" aria-hidden="true">
+              <defs>
+                <radialGradient id="tumbler-shadow">
+                  <stop offset="0" stop-color="#000" stop-opacity="0.35"/>
+                  <stop offset="1" stop-color="#000" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <ellipse cx="62" cy="188" rx="52" ry="9" fill="url(#tumbler-shadow)"/>
+              <path d="M70 24 C 78 12, 94 9, 99 16 C 103 22, 95 28, 82 31" fill="none" stroke="#141414" stroke-width="6" stroke-linecap="round"/>
+              <rect x="37" y="18" width="46" height="24" rx="7" fill="#141414"/>
+              <rect x="42" y="40" width="36" height="11" fill="#202020"/>
+              <path d="M33 60 Q33 50 43 50 H77 Q87 50 87 60 V174 Q87 184 77 184 H43 Q33 184 33 174 Z" fill="#141414"/>
+              <rect x="33" y="62" width="54" height="3" fill="#2a2a2a"/>
+              <rect x="39" y="72" width="4" height="100" rx="2" fill="#fff" opacity="0.08"/>
+              <use href="#bitts-mark" x="52" y="102" width="16" height="25" style="color:#fff"/>
+            </svg>
+            <p class="promo-card-desc">Sayangi bumi, kurangi sampah plastik. Bawa botol atau tumbler-mu dari rumah dan nikmati potongan 10% untuk kopi favoritmu.</p>
+            <div class="promo-footer">
+              <a href="syarat-ketentuan.html#bitts-tumbler" class="promo-terms">*s&amp;k berlaku</a>
               <button type="button" class="promo-cta-btn open-voucher-modal" data-promo="tumbler" data-track="claim_voucher" data-track-label="tumbler">Klaim Voucher</button>
             </div>
-          </div>
+            <div class="village" aria-hidden="true"></div>
+          </article>
         </div>
       </div>
     </section>
@@ -260,23 +286,23 @@
       <div class="section-container">
         <div class="section-header flex-header">
           <div>
-            <span class="section-tag font-marker">freshly brewed</span>
-            <h2 class="section-title">explore menu terbaru</h2>
+            <p class="tag-line">freshly brewed</p>
+            <h2 class="section-title hand">Menu terbaru</h2>
           </div>
-          
+
           <!-- Interactive Promo Price Switcher -->
           <div class="promo-calculator-widget">
-            <span class="calculator-label">Aktifkan Diskonmu:</span>
+            <span class="calculator-label">Aktifkan diskonmu</span>
             <div class="calculator-toggles">
               <label class="toggle-container">
                 <input type="checkbox" id="calc-bike" class="calc-checkbox">
                 <span class="toggle-custom"></span>
-                🚴 Naik Sepeda (10%)
+                Naik Sepeda (10%)
               </label>
               <label class="toggle-container">
                 <input type="checkbox" id="calc-tumbler" class="calc-checkbox">
                 <span class="toggle-custom"></span>
-                🥤 Bawa Tumbler (10%)
+                Bawa Tumbler (10%)
               </label>
             </div>
             <p class="calculator-note" id="calc-note">Pilih salah satu, promo tidak bisa digabung.</p>
@@ -285,16 +311,16 @@
 
         <!-- Menu Tabs Filter -->
         <div class="menu-tabs">
-          <button class="menu-tab-btn active" data-filter="all">All Drinks</button>
-          <button class="menu-tab-btn" data-filter="bitter">Bitter (Coffee Heavy)</button>
-          <button class="menu-tab-btn" data-filter="sweets">Sweets (Creamy & Boba)</button>
+          <button class="menu-tab-btn active" data-filter="all">Semua</button>
+          <button class="menu-tab-btn" data-filter="bitter">Bitter</button>
+          <button class="menu-tab-btn" data-filter="sweets">Sweets</button>
         </div>
 
         <!-- Menu Grid -->
         <div class="menu-grid" id="menu-items-container">
-          
+
           <!-- Menu Item 1 (Sweets) -->
-          <div class="menu-card card-neo" data-category="sweets" data-price="22000">
+          <div class="menu-card" data-category="sweets" data-price="22000">
             <div class="menu-card-img-wrapper">
               <img src="assets/img/latte.webp" width="1024" height="1024" loading="lazy" decoding="async" alt="Milo Boba Latte">
               <span class="menu-item-tag sweets-tag">New Sweets</span>
@@ -313,7 +339,7 @@
           </div>
 
           <!-- Menu Item 2 (Sweets) -->
-          <div class="menu-card card-neo" data-category="sweets" data-price="18000">
+          <div class="menu-card" data-category="sweets" data-price="18000">
             <div class="menu-card-img-wrapper">
               <img src="assets/img/latte.webp" width="1024" height="1024" loading="lazy" decoding="async" alt="Es Kopi Susu Bitts">
               <span class="menu-item-tag signature-tag">Best Seller</span>
@@ -332,8 +358,8 @@
           </div>
 
           <!-- Menu Item 3 (Bitter) -->
-          <div class="menu-card card-neo" data-category="bitter" data-price="20000">
-            <div class="menu-card-img-wrapper bg-dark-img">
+          <div class="menu-card" data-category="bitter" data-price="20000">
+            <div class="menu-card-img-wrapper">
               <img src="assets/img/latte.webp" width="1024" height="1024" loading="lazy" decoding="async" alt="V60 Gunung Halu">
               <span class="menu-item-tag bitter-tag">Bitter Choice</span>
             </div>
@@ -351,7 +377,7 @@
           </div>
 
           <!-- Menu Item 4 (Bitter) -->
-          <div class="menu-card card-neo" data-category="bitter" data-price="15000">
+          <div class="menu-card" data-category="bitter" data-price="15000">
             <div class="menu-card-img-wrapper">
               <img src="assets/img/latte.webp" width="1024" height="1024" loading="lazy" decoding="async" alt="Double Espresso Shot">
               <span class="menu-item-tag bold-tag">Extra Bold</span>
@@ -370,7 +396,7 @@
           </div>
 
           <!-- Menu Item 5 (Sweets) -->
-          <div class="menu-card card-neo" data-category="sweets" data-price="20000">
+          <div class="menu-card" data-category="sweets" data-price="20000">
             <div class="menu-card-img-wrapper">
               <img src="assets/img/latte.webp" width="1024" height="1024" loading="lazy" decoding="async" alt="Matcha Iced Latte">
               <span class="menu-item-tag sweets-tag">Non-Coffee</span>
@@ -389,7 +415,7 @@
           </div>
 
           <!-- Menu Item 6 (Bitter) -->
-          <div class="menu-card card-neo" data-category="bitter" data-price="20000">
+          <div class="menu-card" data-category="bitter" data-price="20000">
             <div class="menu-card-img-wrapper">
               <img src="assets/img/latte.webp" width="1024" height="1024" loading="lazy" decoding="async" alt="Japanese Drip Coffee">
               <span class="menu-item-tag bitter-tag">Ice Brew</span>
@@ -412,57 +438,52 @@
     </section>
 
     <!-- REAL VIBE (SUASANA) SECTION -->
-    <section class="suasana-section" id="suasana">
+    <section class="suasana-section story-bg" id="suasana">
       <div class="section-container">
-        <div class="section-header text-center">
-          <span class="section-tag font-marker">real atmosphere</span>
-          <h2 class="section-title">suasana real di bitts</h2>
+        <div class="section-header">
+          <p class="tag-line">real atmosphere</p>
+          <h2 class="section-title hand">Suasana real<br>di Bitts</h2>
           <p class="section-subtitle">Gak perlu review palsu. Intip langsung vibe nyata nongkrong asyik, kerja produktif, atau sekadar chill di spot kami.</p>
         </div>
 
         <div class="gallery-scroll-container">
-          <!-- Polaroid 1 -->
-          <div class="polaroid-card">
+          <figure class="polaroid-card">
             <div class="polaroid-img-wrapper">
-              <img src="assets/img/atmosphere.webp" width="1024" height="1024" loading="lazy" decoding="async" alt="Sudut Bar Bitts Coffee">
+              <img src="assets/img/bitts-latte.webp" width="720" height="780" loading="lazy" decoding="async" alt="Latte art di drip tray Bitts Coffee">
             </div>
-            <div class="polaroid-caption font-marker">the lab where magic happens.</div>
-          </div>
+            <figcaption class="polaroid-caption">pour with passion, serve with love.</figcaption>
+          </figure>
 
-          <!-- Polaroid 2 (With Gen-Z Eye Censor Overlay) -->
-          <div class="polaroid-card">
-            <div class="polaroid-img-wrapper position-relative">
+          <figure class="polaroid-card">
+            <div class="polaroid-img-wrapper is-bw">
               <img src="assets/img/people.webp" width="1024" height="1024" loading="lazy" decoding="async" alt="Teman nongkrong di Bitts Coffee">
-              <!-- Censor Stroke Overlay -->
-              <div class="censor-overlay">
-                <div class="censor-bar">UNFILTERED STORIES</div>
-              </div>
+              <!-- Sensor mata ala story Bitts -->
+              <span class="censor-strip" style="left: 22%; top: 33%;"></span>
+              <span class="censor-strip" style="left: 64%; top: 37%;"></span>
             </div>
-            <div class="polaroid-caption font-marker">sharing sweets & bitter stories here.</div>
-          </div>
+            <figcaption class="polaroid-caption">sharing sweets &amp; bitter stories here.</figcaption>
+          </figure>
 
-          <!-- Polaroid 3 -->
-          <div class="polaroid-card">
+          <figure class="polaroid-card">
             <div class="polaroid-img-wrapper">
-              <img src="assets/img/latte.webp" width="1024" height="1024" loading="lazy" decoding="async" alt="Pouring latte art">
+              <img src="assets/img/atmosphere.webp" width="1024" height="1024" loading="lazy" decoding="async" alt="Sudut bar Bitts Coffee">
             </div>
-            <div class="polaroid-caption font-marker">pour with passion, serve with love.</div>
-          </div>
+            <figcaption class="polaroid-caption">the lab where magic happens.</figcaption>
+          </figure>
         </div>
 
-        <div class="gallery-hint text-center">
-          <span>← Geser untuk melihat foto lainnya →</span>
-        </div>
+        <p class="gallery-hint">geser untuk melihat foto lainnya →</p>
       </div>
+      <div class="village" aria-hidden="true"></div>
     </section>
 
     <!-- TESTIMONIALS SECTION -->
     <section class="testimonials-section" id="testimoni">
       <div class="section-container">
-        <div class="section-header text-center">
-          <span class="section-tag font-marker">testimonials</span>
-          <h2 class="section-title">kata mereka tentang bitts</h2>
-          <p class="section-subtitle">Ulasan jujur dari kawan setia Bitts Coffee. Bukti cita rasa pahit & manis kami beneran nyata.</p>
+        <div class="section-header">
+          <p class="tag-line">testimonials</p>
+          <h2 class="section-title hand">Kata mereka<br>tentang Bitts</h2>
+          <p class="section-subtitle">Ulasan jujur dari kawan setia Bitts Coffee. Bukti cita rasa pahit &amp; manis kami beneran nyata.</p>
         </div>
 
         <!-- WAJIB DIGANTI SEBELUM GO-LIVE: 3 ulasan di bawah masih contoh.
@@ -470,9 +491,9 @@
              lalu ganti teks, nama, dan keterangannya. -->
         <div class="testimonials-grid">
           <!-- Testimonial 1 -->
-          <div class="testimonial-card card-neo">
-            <span class="quote-icon">“</span>
-            <p class="testimonial-quote">"Es Kopi Susu Bitts-nya beneran nagih! Pas banget buat nemenin nugas. Vibe kafenya tenang, lagunya asyik, dan stopkontaknya melimpah."</p>
+          <div class="testimonial-card">
+            <span class="quote-icon" aria-hidden="true">“</span>
+            <p class="testimonial-quote">Es Kopi Susu Bitts-nya beneran nagih! Pas banget buat nemenin nugas. Vibe kafenya tenang, lagunya asyik, dan stopkontaknya melimpah.</p>
             <div class="testimonial-author">
               <div class="author-avatar bg-yellow">A</div>
               <div class="author-info">
@@ -483,9 +504,9 @@
           </div>
 
           <!-- Testimonial 2 -->
-          <div class="testimonial-card card-neo">
-            <span class="quote-icon">“</span>
-            <p class="testimonial-quote">"Suka banget sama kampanye Bitts Bike! Lumayan dapet diskon 10% tiap gowes pagi ke sini. Kopinya bersih, beans lokalnya jempolan."</p>
+          <div class="testimonial-card">
+            <span class="quote-icon" aria-hidden="true">“</span>
+            <p class="testimonial-quote">Suka banget sama kampanye Bitts Bike! Lumayan dapet diskon 10% tiap gowes pagi ke sini. Kopinya bersih, beans lokalnya jempolan.</p>
             <div class="testimonial-author">
               <div class="author-avatar bg-black text-white">D</div>
               <div class="author-info">
@@ -496,9 +517,9 @@
           </div>
 
           <!-- Testimonial 3 -->
-          <div class="testimonial-card card-neo">
-            <span class="quote-icon">“</span>
-            <p class="testimonial-quote">"Milo Boba Latte-nya juara! Manisnya pas, bobanya kenyal banget. Tempat favorit buat nongkrong sore pas balik kerja."</p>
+          <div class="testimonial-card">
+            <span class="quote-icon" aria-hidden="true">“</span>
+            <p class="testimonial-quote">Milo Boba Latte-nya juara! Manisnya pas, bobanya kenyal banget. Tempat favorit buat nongkrong sore pas balik kerja.</p>
             <div class="testimonial-author">
               <div class="author-avatar bg-grey">S</div>
               <div class="author-info">
@@ -516,105 +537,105 @@
     </section>
 
     <!-- SPACE BOOKING SECTION -->
-    <section class="booking-section" id="booking">
+    <section class="booking-section story-bg" id="booking">
       <div class="section-container">
-        <div class="section-header text-center">
-          <span class="section-tag font-marker">gatherings & events</span>
-          <h2 class="section-title">rencanakan acaramu di bitts</h2>
+        <div class="section-header">
+          <p class="tag-line">gatherings &amp; events</p>
+          <h2 class="section-title hand">Rencanakan<br>acaramu di Bitts</h2>
           <p class="section-subtitle">Mulai dari kerja kelompok (WFC), meeting formal, arisan, hingga acara buka puasa bersama (bukber) dan ulang tahun. Kami punya ruang yang pas untukmu.</p>
         </div>
 
         <div class="booking-grid">
           <!-- Ciwasiat Space -->
-          <div class="booking-card card-neo">
+          <div class="booking-card">
             <div class="booking-img-wrapper">
-              <img src="assets/img/atmosphere.webp" width="1024" height="1024" loading="lazy" decoding="async" alt="Bitts Ciwasiat Indoor Space">
+              <img src="assets/img/atmosphere.webp" width="1024" height="1024" loading="lazy" decoding="async" alt="Ruang indoor Bitts Ciwasiat">
             </div>
             <div class="booking-info">
-              <h3 class="booking-title">Indoor AC & Co-Working (Ciwasiat)</h3>
+              <p class="addr-line"><span><em>Jl. Ciwasiat</em> - Pandeglang</span></p>
+              <h3 class="booking-title hand">Indoor AC &amp; co-working</h3>
               <p class="booking-desc">Kapasitas hingga 30 orang. Dilengkapi AC sejuk, Wi-Fi berkecepatan tinggi, stopkontak di setiap meja, dan suasana tenang yang mendukung produktivitas.</p>
               <ul class="booking-features">
-                <li>✓ Free Wi-Fi 100 Mbps</li>
-                <li>✓ AC & Projector Ready</li>
-                <li>✓ Stopkontak melimpah (WFC Friendly)</li>
+                <li>Free Wi-Fi 100 Mbps</li>
+                <li>AC &amp; projector ready</li>
+                <li>Stopkontak melimpah (WFC friendly)</li>
               </ul>
-              <a href="https://wa.me/6281234567890?text=Halo%20Bitts%20Coffee%20Ciwasiat!%20Saya%20ingin%20reservasi%20ruangan%20untuk%20acara%20[Meeting/Nugas/Gathering]%20pada%20tanggal%20[Tanggal]%20untuk%20[Jumlah]%20orang.%20(via%20website)" target="_blank" class="btn btn-black btn-block text-center font-mono" data-track="booking_request" data-track-label="ciwasiat">Reservasi Ruangan</a>
+              <a href="https://wa.me/6281234567890?text=Halo%20Bitts%20Coffee%20Ciwasiat!%20Saya%20ingin%20reservasi%20ruangan%20untuk%20acara%20[Meeting/Nugas/Gathering]%20pada%20tanggal%20[Tanggal]%20untuk%20[Jumlah]%20orang.%20(via%20website)" target="_blank" class="btn btn-black btn-block" data-track="booking_request" data-track-label="ciwasiat">Reservasi Ruangan</a>
             </div>
           </div>
 
           <!-- Cigadung Space -->
-          <div class="booking-card card-neo">
+          <div class="booking-card">
             <div class="booking-img-wrapper">
-              <img src="assets/img/people.webp" width="1024" height="1024" loading="lazy" decoding="async" alt="Bitts Cigadung Garden Space">
+              <img src="assets/img/people.webp" width="1024" height="1024" loading="lazy" decoding="async" alt="Area outdoor Bitts Cigadung">
             </div>
             <div class="booking-info">
-              <h3 class="booking-title">Outdoor Garden & Live Stage (Cigadung)</h3>
+              <p class="addr-line"><span><em>Jl. Cigadung</em> - Pandeglang</span></p>
+              <h3 class="booking-title hand">Outdoor garden &amp; live stage</h3>
               <p class="booking-desc">Kapasitas hingga 80 orang. Area outdoor taman yang luas, panggung musik, ramah anak, sangat cocok untuk arisan besar, ulang tahun, reuni, atau buka bersama.</p>
               <ul class="booking-features">
-                <li>✓ Sound System & Live Music Stage</li>
-                <li>✓ Ramah Anak & Area Luas</li>
-                <li>✓ Buffet Catering Available</li>
+                <li>Sound system &amp; live music stage</li>
+                <li>Ramah anak &amp; area luas</li>
+                <li>Buffet catering available</li>
               </ul>
-              <a href="https://wa.me/6281234567890?text=Halo%20Bitts%20Coffee%20Cigadung!%20Saya%20ingin%20reservasi%20tempat%20acara%20[Bukber/Ulang%20Tahun/Gathering]%20pada%20tanggal%20[Tanggal]%20untuk%20[Jumlah]%20orang.%20(via%20website)" target="_blank" class="btn btn-black btn-block text-center font-mono" data-track="booking_request" data-track-label="cigadung">Booking Tempat Acara</a>
+              <a href="https://wa.me/6281234567890?text=Halo%20Bitts%20Coffee%20Cigadung!%20Saya%20ingin%20reservasi%20tempat%20acara%20[Bukber/Ulang%20Tahun/Gathering]%20pada%20tanggal%20[Tanggal]%20untuk%20[Jumlah]%20orang.%20(via%20website)" target="_blank" class="btn btn-black btn-block" data-track="booking_request" data-track-label="cigadung">Booking Tempat Acara</a>
             </div>
           </div>
         </div>
       </div>
+      <div class="village" aria-hidden="true"></div>
     </section>
 
-    <!-- ORIGIN COFFEE BEANS SECTION -->
+    <!-- ORIGIN COFFEE BEANS SECTION: warna label mengikuti kemasan asli di bar Bitts -->
     <section class="beans-section" id="beans">
       <div class="section-container">
-        <div class="section-header text-center">
-          <span class="section-tag font-marker">selected beans</span>
-          <h2 class="section-title">biji kopi pilihan bitts</h2>
+        <div class="section-header">
+          <p class="tag-line">selected beans</p>
+          <h2 class="section-title hand">Biji kopi<br>pilihan Bitts</h2>
           <p class="section-subtitle">Cita rasa "Bitter" kami datang dari kurasi biji kopi lokal terbaik yang dipanggang dengan profil rasa optimal.</p>
         </div>
 
         <div class="beans-grid">
           <!-- Bean Card 1: Gunung Halu -->
-          <div class="bean-card card-neo">
+          <div class="bean-card bean-halu">
             <div class="bean-header">
-              <h3 class="bean-name">Gunung Halu</h3>
-              <span class="bean-origin font-marker">jawa barat</span>
+              <span class="bean-origin">Jawa Barat</span>
+              <h3 class="bean-name hand">Gunung Halu</h3>
             </div>
-            <div class="bean-divider"></div>
             <div class="bean-details">
-              <div class="detail-row"><span>Process:</span> <strong>Honey Process</strong></div>
-              <div class="detail-row"><span>Notes:</span> <strong>Banana, Honey, Lemon acidity</strong></div>
-              <div class="detail-row"><span>Character:</span> <strong>Light, Sweet, Fruity</strong></div>
+              <div class="detail-row"><span>Process</span> <strong>Honey Process</strong></div>
+              <div class="detail-row"><span>Notes</span> <strong>Banana, Honey, Lemon acidity</strong></div>
+              <div class="detail-row"><span>Character</span> <strong>Light, Sweet, Fruity</strong></div>
             </div>
-            <div class="bean-tag bg-yellow text-black font-marker">Best Filter Coffee</div>
+            <div class="bean-tag">Best Filter Coffee</div>
           </div>
 
           <!-- Bean Card 2: Jawa Arabica -->
-          <div class="bean-card card-neo">
+          <div class="bean-card bean-java">
             <div class="bean-header">
-              <h3 class="bean-name">Java Preanger</h3>
-              <span class="bean-origin font-marker">jawa tengah</span>
+              <span class="bean-origin">Jawa Tengah</span>
+              <h3 class="bean-name hand">Java Preanger</h3>
             </div>
-            <div class="bean-divider"></div>
             <div class="bean-details">
-              <div class="detail-row"><span>Process:</span> <strong>Full Wash</strong></div>
-              <div class="detail-row"><span>Notes:</span> <strong>Chocolate, Brown sugar, Nutty</strong></div>
-              <div class="detail-row"><span>Character:</span> <strong>Heavy Body, Low Acidity, Sweet</strong></div>
+              <div class="detail-row"><span>Process</span> <strong>Full Wash</strong></div>
+              <div class="detail-row"><span>Notes</span> <strong>Chocolate, Brown sugar, Nutty</strong></div>
+              <div class="detail-row"><span>Character</span> <strong>Heavy Body, Low Acidity, Sweet</strong></div>
             </div>
-            <div class="bean-tag bg-black text-white font-marker">Best Espresso Blend</div>
+            <div class="bean-tag">Best Espresso Blend</div>
           </div>
 
           <!-- Bean Card 3: Papua Wamena -->
-          <div class="bean-card card-neo">
+          <div class="bean-card bean-wamena">
             <div class="bean-header">
-              <h3 class="bean-name">Papua Wamena</h3>
-              <span class="bean-origin font-marker">papua</span>
+              <span class="bean-origin">Papua</span>
+              <h3 class="bean-name hand">Papua Wamena</h3>
             </div>
-            <div class="bean-divider"></div>
             <div class="bean-details">
-              <div class="detail-row"><span>Process:</span> <strong>Natural</strong></div>
-              <div class="detail-row"><span>Notes:</span> <strong>Dark Berry, Floral, Tobacco finish</strong></div>
-              <div class="detail-row"><span>Character:</span> <strong>Complex, Rich, Earthy</strong></div>
+              <div class="detail-row"><span>Process</span> <strong>Natural</strong></div>
+              <div class="detail-row"><span>Notes</span> <strong>Dark Berry, Floral, Tobacco finish</strong></div>
+              <div class="detail-row"><span>Character</span> <strong>Complex, Rich, Earthy</strong></div>
             </div>
-            <div class="bean-tag bg-grey text-black font-marker">Unique Taste</div>
+            <div class="bean-tag">Unique Taste</div>
           </div>
         </div>
       </div>
@@ -623,15 +644,17 @@
     <!-- LOCATION & OPEN HOURS SECTION -->
     <section class="location-section" id="lokasi">
       <div class="section-container">
-        <div class="section-header text-center">
-          <span class="section-tag font-marker">come visit</span>
-          <h2 class="section-title">temukan bitts terdekat</h2>
-          <p class="section-subtitle">Kami memiliki dua cabang di Pandeglang. Pilih cabang terdekat dan dapatkan rute terbaikmu!</p>
+        <!-- Banner meniru story "WE ARE OPEN" Bitts -->
+        <div class="open-banner">
+          <h2 class="open-title hand">We are<br>open</h2>
+          <p class="open-hours">08.00 - 22.00</p>
+          <p class="open-address">Jl. Ciwasiat No. 21 Pandeglang,<br>Kabupaten Pandeglang, Banten</p>
+          <p class="open-address">Jl. Cigadung Mandiri, Cigadung,<br>Karang Tanjung, Pandeglang, Banten</p>
         </div>
 
         <div class="location-layout">
           <!-- Info Column -->
-          <div class="location-info-panel card-neo">
+          <div class="location-info-panel">
             <!-- Tabs -->
             <div class="location-tabs">
               <button class="location-tab-btn active" data-branch="ciwasiat">Bitts Ciwasiat</button>
@@ -640,63 +663,63 @@
 
             <!-- Panel Content -->
             <div class="branch-content active" id="branch-ciwasiat">
-              <h3 class="branch-title">Bitts Coffee Ciwasiat</h3>
+              <h3 class="branch-title hand">Bitts Coffee Ciwasiat</h3>
               <div class="branch-detail-item">
-                <span class="detail-label">Alamat Lengkap:</span>
+                <span class="detail-label">Alamat lengkap</span>
                 <p class="detail-text">Jl. Ciwasiat No. 21, Pandeglang, Kabupaten Pandeglang, Banten 42211</p>
               </div>
               <div class="branch-detail-item">
-                <span class="detail-label">Jam Operasional:</span>
-                <p class="detail-text font-marker text-xl">08.00 - 22.00 WIB</p>
+                <span class="detail-label">Jam operasional</span>
+                <p class="detail-text">Setiap hari, 08.00 - 22.00 WIB</p>
               </div>
               <div class="branch-detail-item">
-                <span class="detail-label">Fasilitas:</span>
+                <span class="detail-label">Fasilitas</span>
                 <p class="detail-text">Indoor AC, Semi-Outdoor, High-speed Wi-Fi, Stopkontak melimpah (cocok untuk WFC), Musholla.</p>
               </div>
               <div class="branch-actions">
-                <a href="https://maps.google.com/?q=Bitts+Coffee+Ciwasiat+Pandeglang" target="_blank" class="btn btn-black btn-block text-center" data-track="get_directions" data-track-label="ciwasiat">Buka Rute di Google Maps</a>
+                <a href="https://maps.google.com/?q=Bitts+Coffee+Ciwasiat+Pandeglang" target="_blank" class="btn btn-black btn-block" data-track="get_directions" data-track-label="ciwasiat">Buka Rute di Google Maps</a>
               </div>
             </div>
 
             <div class="branch-content" id="branch-cigadung">
-              <h3 class="branch-title">Bitts Coffee Cigadung</h3>
+              <h3 class="branch-title hand">Bitts Coffee Cigadung</h3>
               <div class="branch-detail-item">
-                <span class="detail-label">Alamat Lengkap:</span>
+                <span class="detail-label">Alamat lengkap</span>
                 <p class="detail-text">Jl. Cigadung Mandiri, Cigadung, Kec. Karang Tanjung, Kabupaten Pandeglang, Banten 42251</p>
               </div>
               <div class="branch-detail-item">
-                <span class="detail-label">Jam Operasional:</span>
-                <p class="detail-text font-marker text-xl">08.00 - 22.00 WIB</p>
+                <span class="detail-label">Jam operasional</span>
+                <p class="detail-text">Setiap hari, 08.00 - 22.00 WIB</p>
               </div>
               <div class="branch-detail-item">
-                <span class="detail-label">Fasilitas:</span>
+                <span class="detail-label">Fasilitas</span>
                 <p class="detail-text">Spacious Outdoor Garden, Live Music Space, Parking Lot luas, Kids-friendly area.</p>
               </div>
               <div class="branch-actions">
-                <a href="https://maps.google.com/?q=Bitts+Coffee+Cigadung+Pandeglang" target="_blank" class="btn btn-black btn-block text-center" data-track="get_directions" data-track-label="cigadung">Buka Rute di Google Maps</a>
+                <a href="https://maps.google.com/?q=Bitts+Coffee+Cigadung+Pandeglang" target="_blank" class="btn btn-black btn-block" data-track="get_directions" data-track-label="cigadung">Buka Rute di Google Maps</a>
               </div>
             </div>
           </div>
 
           <!-- Map Panel (Real GMaps Frame) -->
-          <div class="location-map-panel card-neo">
-            <!-- IFrame Ciwasiat (Default Active) -->
-            <iframe 
+          <div class="location-map-panel">
+            <iframe
               id="map-ciwasiat"
               class="map-iframe active"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.7180491823377!2d106.1030062!3d-6.3006847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e4210d738bbd479%3A0xe9634e565983eb05!2sJl.%20Ciwasiat%20No.21%2C%20Pandeglang%2C%20Kec.%20Pandeglang%2C%20Kabupaten%20Pandeglang%2C%20Banten%2042213!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
-              allowfullscreen="" 
-              loading="lazy" 
+              title="Peta Bitts Coffee Ciwasiat"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.7180491823377!2d106.1030062!3d-6.3006847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e4210d738bbd479%3A0xe9634e565983eb05!2sJl.%20Ciwasiat%20No.21%2C%20Pandeglang%2C%20Kec.%20Pandeglang%2C%20Kabupaten%20Pandeglang%2C%20Banten%2042213!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+              allowfullscreen=""
+              loading="lazy"
               referrerpolicy="no-referrer-when-downgrade">
             </iframe>
 
-            <!-- IFrame Cigadung -->
-            <iframe 
+            <iframe
               id="map-cigadung"
               class="map-iframe"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.8432360548174!2d106.1264871!3d-6.2843482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e4210ec947df835%3A0xf695f2a1db39268f!2sCigadung%2C%20Kec.%20Karang%20Tanjung%2C%20Kabupaten%20Pandeglang%2C%20Banten!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
-              allowfullscreen="" 
-              loading="lazy" 
+              title="Peta Bitts Coffee Cigadung"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.8432360548174!2d106.1264871!3d-6.2843482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e4210ec947df835%3A0xf695f2a1db39268f!2sCigadung%2C%20Kec.%20Karang%20Tanjung%2C%20Kabupaten%20Pandeglang%2C%20Banten!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+              allowfullscreen=""
+              loading="lazy"
               referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           </div>
@@ -704,17 +727,20 @@
       </div>
     </section>
 
-    <!-- NEWSLETTER / CAMPAIGN CTA SECTION -->
+    <!-- BITTS CLUB CTA SECTION -->
     <section class="campaign-cta-section">
-      <div class="section-container bg-black text-white card-neo cta-container">
-        <h2 class="cta-title">Gabung Bitts Club & Dapatkan Info Special!</h2>
-        <p class="cta-desc text-light">Kami rutin membagikan kupon rahasia dan kabar menu baru lewat WhatsApp. Yuk, jangan ketinggalan!</p>
+      <div class="cta-container">
+        <svg class="cta-mark" aria-hidden="true"><use href="#bitts-mark"/></svg>
+        <h2 class="cta-title hand">Gabung Bitts Club</h2>
+        <p class="cta-poster poster">Kupon rahasia langsung ke WhatsApp</p>
+        <p class="cta-desc">Kami rutin membagikan kupon rahasia dan kabar menu baru lewat WhatsApp. Yuk, jangan ketinggalan!</p>
         <form class="cta-form" id="club-form" novalidate>
           <input type="tel" name="phone" id="club-phone" placeholder="Nomor WhatsApp kamu" aria-label="Nomor WhatsApp" required class="cta-input" inputmode="tel" autocomplete="tel">
-          <button type="submit" class="btn btn-white cta-submit-btn" id="club-submit">Join Club</button>
+          <button type="submit" class="btn cta-submit-btn" id="club-submit">Join Club</button>
         </form>
-        <p class="cta-consent text-light">Dengan bergabung, kamu setuju menerima info promo Bitts via WhatsApp dan setuju dengan <a href="kebijakan-privasi.html">Kebijakan Privasi</a> kami. Bisa berhenti kapan saja.</p>
+        <p class="cta-consent">Dengan bergabung, kamu setuju menerima info promo Bitts via WhatsApp dan setuju dengan <a href="kebijakan-privasi.html">Kebijakan Privasi</a> kami. Bisa berhenti kapan saja.</p>
         <p class="cta-status" id="club-status" role="status" aria-live="polite"></p>
+        <div class="village village-dark" aria-hidden="true"></div>
       </div>
     </section>
   </main>
@@ -724,17 +750,10 @@
     <div class="footer-container">
       <div class="footer-brand">
         <div class="logo-group">
-          <!-- Double Bean SVG Logo (All White version) -->
-          <svg viewBox="0 0 100 100" class="bitts-logo-svg white-logo" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="46" fill="none" stroke="#fff" stroke-width="6"/>
-            <!-- Top bean -->
-            <path d="M 36,38 C 38,28 58,26 62,38 C 64,44 54,50 44,48 C 36,46 36,40 36,38 Z" fill="#fff"/>
-            <!-- Bottom bean -->
-            <path d="M 37,58 C 42,52 60,54 60,64 C 60,72 48,74 41,70 C 35,66 34,62 37,58 Z" fill="#fff"/>
-          </svg>
-          <span class="logo-text text-white">bitts coffee.</span>
+          <svg class="bitts-mark" aria-hidden="true"><use href="#bitts-mark"/></svg>
+          <span class="logo-text">bitts coffee</span>
         </div>
-        <p class="footer-slogan">"we serve bitter and sweets"</p>
+        <p class="footer-slogan">we serve bitter and sweets</p>
       </div>
 
       <div class="footer-links">
@@ -751,18 +770,18 @@
       <div class="footer-socials">
         <h4 class="footer-heading">Sosial Media</h4>
         <a href="https://instagram.com/bittscoffee" target="_blank" class="footer-link flex-align">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
           @bittscoffee
         </a>
         <a href="https://wa.me/6281234567890?text=Halo%20Bitts%20Coffee!%20(via%20website)" target="_blank" class="footer-link flex-align" data-track="click_whatsapp" data-track-label="footer">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           Chat WhatsApp
         </a>
       </div>
     </div>
 
-    <div class="footer-bottom text-center">
-      <p>&copy; 2026 Bitts Coffee. All rights reserved. Made with love & coffee beans.</p>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Bitts Coffee. All rights reserved. Made with love &amp; coffee beans.</p>
       <p class="footer-legal">
         <a href="kebijakan-privasi.html">Kebijakan Privasi</a>
         <span aria-hidden="true">·</span>
@@ -773,22 +792,18 @@
 
   <!-- Delivery Platform Selection Modal -->
   <div class="delivery-modal-backdrop" id="delivery-modal">
-    <div class="delivery-modal-content card-neo" role="dialog" aria-modal="true" aria-labelledby="delivery-modal-title">
+    <div class="delivery-modal-content" role="dialog" aria-modal="true" aria-labelledby="delivery-modal-title">
       <button class="modal-close-btn" id="modal-close" aria-label="Tutup">&times;</button>
-      <h3 class="modal-title font-marker" id="delivery-modal-title">Pesan Online</h3>
+      <h3 class="modal-title hand" id="delivery-modal-title">Pesan online</h3>
       <p class="modal-subtitle">Kamu ingin memesan <strong id="modal-item-name">[Nama Menu]</strong> dari cabang mana?</p>
-      
+
       <div class="modal-branches-grid">
         <!-- Branch 1 -->
         <div class="modal-branch-card">
           <h4 class="modal-branch-name">Bitts Ciwasiat</h4>
           <div class="modal-btn-row">
-            <a href="https://gofood.link/a/bitts-ciwasiat" target="_blank" class="btn-delivery gofood" data-track="order_delivery" data-track-label="gofood_ciwasiat">
-              GoFood
-            </a>
-            <a href="https://food.grab.com/id/en/restaurant/bitts-ciwasiat" target="_blank" class="btn-delivery grabfood" data-track="order_delivery" data-track-label="grabfood_ciwasiat">
-              GrabFood
-            </a>
+            <a href="https://gofood.link/a/bitts-ciwasiat" target="_blank" class="btn-delivery gofood" data-track="order_delivery" data-track-label="gofood_ciwasiat">GoFood</a>
+            <a href="https://food.grab.com/id/en/restaurant/bitts-ciwasiat" target="_blank" class="btn-delivery grabfood" data-track="order_delivery" data-track-label="grabfood_ciwasiat">GrabFood</a>
           </div>
         </div>
 
@@ -796,12 +811,8 @@
         <div class="modal-branch-card">
           <h4 class="modal-branch-name">Bitts Cigadung</h4>
           <div class="modal-btn-row">
-            <a href="https://gofood.link/a/bitts-cigadung" target="_blank" class="btn-delivery gofood" data-track="order_delivery" data-track-label="gofood_cigadung">
-              GoFood
-            </a>
-            <a href="https://food.grab.com/id/en/restaurant/bitts-cigadung" target="_blank" class="btn-delivery grabfood" data-track="order_delivery" data-track-label="grabfood_cigadung">
-              GrabFood
-            </a>
+            <a href="https://gofood.link/a/bitts-cigadung" target="_blank" class="btn-delivery gofood" data-track="order_delivery" data-track-label="gofood_cigadung">GoFood</a>
+            <a href="https://food.grab.com/id/en/restaurant/bitts-cigadung" target="_blank" class="btn-delivery grabfood" data-track="order_delivery" data-track-label="grabfood_cigadung">GrabFood</a>
           </div>
         </div>
       </div>
@@ -811,14 +822,14 @@
 
   <!-- Voucher Claim Modal -->
   <div class="delivery-modal-backdrop" id="voucher-modal">
-    <div class="delivery-modal-content card-neo" role="dialog" aria-modal="true" aria-labelledby="voucher-modal-title">
+    <div class="delivery-modal-content" role="dialog" aria-modal="true" aria-labelledby="voucher-modal-title">
       <button class="modal-close-btn" aria-label="Tutup">&times;</button>
-      <h3 class="modal-title font-marker" id="voucher-modal-title">Voucher Kamu</h3>
+      <h3 class="modal-title hand" id="voucher-modal-title">Voucher kamu</h3>
       <p class="modal-subtitle">Tunjukkan kode ini ke kasir untuk dapat potongan <strong id="voucher-promo-name">[Nama Promo]</strong>.</p>
       <div class="voucher-code" id="voucher-code">WEB-XXXX-XXXX</div>
       <p class="voucher-requirement" id="voucher-requirement">[Syarat Promo]</p>
       <a href="#" target="_blank" class="btn btn-black btn-block" id="voucher-wa-btn" data-track="click_whatsapp" data-track-label="voucher">Klaim via WhatsApp</a>
-      <p class="modal-footer-note">Berlaku di Bitts Ciwasiat & Cigadung. <a href="syarat-ketentuan.html" target="_blank">*s&k berlaku</a></p>
+      <p class="modal-footer-note">Berlaku di Bitts Ciwasiat &amp; Cigadung. <a href="syarat-ketentuan.html" target="_blank">*s&amp;k berlaku</a></p>
     </div>
   </div>
 

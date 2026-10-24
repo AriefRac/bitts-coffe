@@ -10,12 +10,28 @@ Landing page Bitts Coffee (Ciwasiat dan Cigadung, Pandeglang). Website statis: H
 | `syarat-ketentuan.html` | S&K promo Bitts Bike, Bitts Tumbler, dan Bitts Club |
 | `kebijakan-privasi.html` | Kebijakan privasi (UU No. 27 Tahun 2022 tentang PDP) |
 | `style.css`, `script.js` | Tampilan dan interaksi untuk semua halaman |
-| `assets/img/` | Foto (WebP), gambar share `og-image.jpg` |
+| `assets/img/` | Foto (WebP), gambar share `og-image.jpg`, pola siluet `village.svg` |
 | `favicon.svg`, `apple-touch-icon.png` | Ikon tab browser dan layar HP |
 | `robots.txt`, `sitemap.xml` | Untuk Google |
 | `apps-script/bitts-club.gs` | Penerima pendaftaran Bitts Club ke Google Sheets (cara deploy ada di dalam file) |
 
 `reference/` dan `assets/*.png` (foto asli resolusi besar) tidak perlu ikut di-upload ke hosting.
+
+## Desain
+
+Tampilan mengikuti story Instagram @bittscoffee (contohnya ada di folder `reference/`).
+
+| Elemen | Dipakai untuk | Sumber di story |
+| --- | --- | --- |
+| Delicious Handrawn (ditebalkan dengan stroke) | Judul dan nama menu | Tulisan tangan "BELI KOPI PAKE TUMBLER", "WE ARE OPEN" |
+| Arimo Bold | Label, tombol, harga | "DAPAT POTONGAN 10%" |
+| Open Sans | Teks isi, alamat bold italic | "Jl. Ciwasiat - Pandeglang" |
+| Titan One (hanya angka) | Angka diskon "10%" 3D | Angka "10%" di story Bitts Bike |
+| `#141414`, putih, gradasi abu-abu | Warna dasar | Latar story |
+| `#f2d106` | Aksen kuning | Badge Bitts Bike |
+| `#754328` | Banner jam buka | Story "WE ARE OPEN" |
+
+Motif yang dipakai ulang: logo dua batu (di-trace dari foto profil IG), garis setelah teks, siluet rumah dan pohon di dasar panel, badge Bitts Bike, dan sensor putih di mata untuk foto orang.
 
 ## Sebelum go-live
 
@@ -31,7 +47,7 @@ Semua isian di bawah masih contoh. Ganti dulu, lalu jalankan perintah cek di bag
 | Link `gofood.link/...` dan `food.grab.com/...` | Link toko asli tiap cabang | `index.html`, modal Pesan Online |
 | 3 testimoni | Ulasan asli (dengan izin pemberi ulasan) | `index.html`, bagian bertanda `WAJIB DIGANTI` |
 | Menu, harga, deskripsi | Data dari Bitts | `index.html`, harga di `data-price` dan `data-original-price` |
-| Foto | Foto asli Bitts | `assets/img/`, lalu buat ulang `og-image.jpg` (1200 x 630) |
+| Foto | Foto asli Bitts | `assets/img/`, lalu buat ulang `og-image.jpg` (1200 x 630). `bitts-bar.webp` dan `bitts-latte.webp` dipotong dari story Instagram (resolusi rendah), ganti dengan file aslinya. `atmosphere`, `latte`, `people` masih foto contoh. |
 
 Hal yang perlu disetujui pemilik Bitts:
 
